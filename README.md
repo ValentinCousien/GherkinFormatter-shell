@@ -27,13 +27,13 @@ Ghokin Shell is a shell script version of [Ghokin](https://github.com/antham/gho
 
 ```bash
 # Download the script
-curl -O https://raw.githubusercontent.com/ValentinCousien/Ghokin-shell/master/ghokin.sh
+curl -O https://raw.githubusercontent.com/ValentinCousien/Ghokin-shell/master/gherkin_formatter.sh
 
 # Make it executable
-chmod +x ghokin.sh
+chmod +x gherkin_formatter.sh
 
 # Optionally, move to a directory in your PATH
-sudo mv ghokin.sh /usr/local/bin/ghokin.sh
+sudo mv gherkin_formatter.sh /usr/local/bin/gherkin_formatter.sh
 ```
 
 ## Usage
@@ -42,33 +42,33 @@ sudo mv ghokin.sh /usr/local/bin/ghokin.sh
 
 ```bash
 # Format a file and output to stdout
-./ghokin.sh fmt stdout features/test.feature
+./gherkin_formatter.sh fmt stdout features/test.feature
 
 # Read from stdin
-cat features/test.feature | ./ghokin.sh fmt stdout
+cat features/test.feature | ./gherkin_formatter.sh fmt stdout
 ```
 
 ### Format and replace
 
 ```bash
 # Format and replace a single file
-./ghokin.sh fmt replace features/test.feature
+./gherkin_formatter.sh fmt replace features/test.feature
 
 # Format all .feature files in a directory
-./ghokin.sh fmt replace features/
+./gherkin_formatter.sh fmt replace features/
 
 # Use custom file extensions
-./ghokin.sh fmt replace features/ -e feature,spec
+./gherkin_formatter.sh fmt replace features/ -e feature,spec
 ```
 
 ### Check formatting
 
 ```bash
 # Check if a file is properly formatted
-./ghokin.sh check features/test.feature
+./gherkin_formatter.sh check features/test.feature
 
 # Check all files in a directory
-./ghokin.sh check features/
+./gherkin_formatter.sh check features/
 ```
 
 ## Configuration
@@ -133,7 +133,7 @@ Supports multiple Gherkin languages:
 
 ```
 Usage:
-  ghokin.sh [command]
+  gherkin_formatter.sh [command]
 
 Available Commands:
   check       Check a file/folder is well formatted
@@ -151,7 +151,7 @@ Flags:
 Format stdin or a file and dump the result on stdout
 
 Usage:
-  ghokin.sh fmt stdout [file path]
+  gherkin_formatter.sh fmt stdout [file path]
 ```
 
 ### fmt replace
@@ -160,7 +160,7 @@ Usage:
 Format and replace a file or a pool of files in folder
 
 Usage:
-  ghokin.sh fmt replace [file or folder path]
+  gherkin_formatter.sh fmt replace [file or folder path]
 
 Flags:
   -e, --extensions   Define file extensions to use (default: feature)
@@ -172,7 +172,7 @@ Flags:
 Check a file/folder is well formatted
 
 Usage:
-  ghokin.sh check [file or folder path]
+  gherkin_formatter.sh check [file or folder path]
 
 Flags:
   -e, --extensions   Define file extensions to use (default: feature)
